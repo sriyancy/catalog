@@ -7,7 +7,7 @@ const mongo_store = require('seneca-mongo-store');
 seneca
 	.quiet()
 	.use(entities)
-	.use(mongo_store, { uri:'mongodb://admin:abc@172.30.188.82:27017/InstaGrocer'})
+	.use(mongo_store,  { name: 'case', host: '127.0.0.1', port: 27017 })
 	.use(cart);
 /* GET users listing. */
 router.get('/', function (req, res, next) {
